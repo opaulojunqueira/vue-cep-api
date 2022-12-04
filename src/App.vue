@@ -68,6 +68,11 @@ export default {
 
             if (result.data.cep == undefined) {
               this.message = `🤔 O CEP inserido é inválido, por favor verifique-o e tente novamente.`
+              this.localidade = null
+              this.bairro = null
+              this.logradouro = null
+              this.complemento = null
+              this.informacoes = null
             } else {
               this.message = `📍 CEP: ${result.data.cep}`
               this.localidade = `📍 Cidade: ${result.data.localidade != '' ? result.data.localidade : 'Não definido'} - ${result.data.uf != '' ? result.data.uf : 'Não definido'}`
